@@ -1,0 +1,38 @@
+def linear_activation(z)
+	return z
+
+def binary_activation(z):
+	if z >= 0:
+		return 1
+	else:
+		return 0
+
+def sigmoid_activation(z):
+	return 1 / (1 + np.exp(-z))
+  
+def tanh_activation(z):
+	return np.tanh(z)
+	
+def arctan_activation(z):
+	return np.arctan(z)
+	
+def relu_activation(z):
+	if z >= 0:
+		return z
+	else:
+		return 0
+
+def leaky_realu_activation(z, alpha):
+	if z > 0:
+		return z
+	else:
+		return alpha * z
+		
+def elu_activation(z, alpha):
+	if z >= 0:
+		return z
+	else:
+		return alpha * (np.exp(z) - 1)
+		
+def softplus_activation(z):
+	return np.log(1 + np.exp(z))
